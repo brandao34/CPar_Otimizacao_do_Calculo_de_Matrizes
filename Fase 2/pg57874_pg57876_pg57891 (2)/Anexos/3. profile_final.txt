@@ -1,0 +1,240 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 95.91     44.28    44.28    11700     3.78     3.78  simulate(EventManager&, int)
+  2.32     45.35     1.07     4505     0.24     0.24  set_bnd(int, int, int, int, float*) [clone .constprop.18]
+  0.91     45.77     0.42      761     0.55     0.55  set_bnd(int, int, int, int, float*) [clone .constprop.21]
+  0.45     45.98     0.21      786     0.27     0.27  set_bnd(int, int, int, int, float*) [clone .constprop.20]
+  0.28     46.11     0.13      730     0.18     0.18  set_bnd(int, int, int, int, float*) [clone .constprop.19]
+  0.15     46.18     0.07                             clear_data()
+  0.00     46.18     0.00      300     0.00     3.17  lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17]
+  0.00     46.18     0.00      200     0.00     1.47  project(int, int, int, float*, float*, float*, float*, float*)
+  0.00     46.18     0.00      100     0.00     0.00  apply_events(std::vector<Event, std::allocator<Event> > const&)
+  0.00     46.18     0.00      100     0.00     5.61  vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float)
+  0.00     46.18     0.00      100     0.00     0.24  dens_step(int, int, int, float*, float*, float*, float*, float*, float, float)
+  0.00     46.18     0.00      100     0.00     0.00  EventManager::get_events_at_timestamp(int) const
+  0.00     46.18     0.00       20     0.00     0.00  void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<Event const&>(Event const&)
+  0.00     46.18     0.00        5     0.00     0.00  void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&>(int&, int&)
+  0.00     46.18     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z13allocate_datav
+  0.00     46.18     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12EventManager11read_eventsERKSs
+  0.00     46.18     0.00        1     0.00     0.00  void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&, int&, int&>(int&, int&, int&, int&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2016 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.02% of 46.18 seconds
+
+index % time    self  children    called     name
+                                 200             dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) <cycle 1> [11]
+                                 400             project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                                3276             vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+                                7824             lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] <cycle 1> [4]
+[1]     95.9   44.28    0.00   11700         simulate(EventManager&, int) <cycle 1> [1]
+                0.00    0.00     100/100         apply_events(std::vector<Event, std::allocator<Event> > const&) [20]
+                0.00    0.00     100/100         EventManager::get_events_at_timestamp(int) const [21]
+                                 100             vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+                                 100             dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) <cycle 1> [11]
+-----------------------------------------------
+                0.02    0.00     100/4505        dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) <cycle 1> [11]
+                0.10    0.00     400/4505        project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                0.95    0.00    4005/4505        lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] <cycle 1> [4]
+[3]      2.3    1.07    0.00    4505         set_bnd(int, int, int, int, float*) [clone .constprop.18] [3]
+-----------------------------------------------
+                                 100             dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) <cycle 1> [11]
+                                 200             project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+[4]      2.1    0.00    0.95     300         lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] <cycle 1> [4]
+                0.95    0.00    4005/4505        set_bnd(int, int, int, int, float*) [clone .constprop.18] [3]
+                                7824             simulate(EventManager&, int) <cycle 1> [1]
+-----------------------------------------------
+                                 100             simulate(EventManager&, int) <cycle 1> [1]
+[5]      1.2    0.00    0.56     100         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+                0.31    0.00     561/761         set_bnd(int, int, int, int, float*) [clone .constprop.21] [6]
+                0.16    0.00     586/786         set_bnd(int, int, int, int, float*) [clone .constprop.20] [8]
+                0.09    0.00     530/730         set_bnd(int, int, int, int, float*) [clone .constprop.19] [9]
+                                3276             simulate(EventManager&, int) <cycle 1> [1]
+                                 200             project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+-----------------------------------------------
+                0.11    0.00     200/761         project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                0.31    0.00     561/761         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+[6]      0.9    0.42    0.00     761         set_bnd(int, int, int, int, float*) [clone .constprop.21] [6]
+-----------------------------------------------
+                                 200             vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+[7]      0.6    0.00    0.29     200         project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                0.11    0.00     200/761         set_bnd(int, int, int, int, float*) [clone .constprop.21] [6]
+                0.10    0.00     400/4505        set_bnd(int, int, int, int, float*) [clone .constprop.18] [3]
+                0.05    0.00     200/786         set_bnd(int, int, int, int, float*) [clone .constprop.20] [8]
+                0.04    0.00     200/730         set_bnd(int, int, int, int, float*) [clone .constprop.19] [9]
+                                 400             simulate(EventManager&, int) <cycle 1> [1]
+                                 200             lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] <cycle 1> [4]
+-----------------------------------------------
+                0.05    0.00     200/786         project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                0.16    0.00     586/786         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+[8]      0.5    0.21    0.00     786         set_bnd(int, int, int, int, float*) [clone .constprop.20] [8]
+-----------------------------------------------
+                0.04    0.00     200/730         project(int, int, int, float*, float*, float*, float*, float*) <cycle 1> [7]
+                0.09    0.00     530/730         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) <cycle 1> [5]
+[9]      0.3    0.13    0.00     730         set_bnd(int, int, int, int, float*) [clone .constprop.19] [9]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     0.2    0.07    0.00                 clear_data() [10]
+-----------------------------------------------
+                                 100             simulate(EventManager&, int) <cycle 1> [1]
+[11]     0.1    0.00    0.02     100         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) <cycle 1> [11]
+                0.02    0.00     100/4505        set_bnd(int, int, int, int, float*) [clone .constprop.18] [3]
+                                 200             simulate(EventManager&, int) <cycle 1> [1]
+                                 100             lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] <cycle 1> [4]
+-----------------------------------------------
+                0.00    0.00     100/100         simulate(EventManager&, int) <cycle 1> [1]
+[20]     0.0    0.00    0.00     100         apply_events(std::vector<Event, std::allocator<Event> > const&) [20]
+-----------------------------------------------
+                0.00    0.00     100/100         simulate(EventManager&, int) <cycle 1> [1]
+[21]     0.0    0.00    0.00     100         EventManager::get_events_at_timestamp(int) const [21]
+                0.00    0.00      20/20          void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<Event const&>(Event const&) [22]
+-----------------------------------------------
+                0.00    0.00      20/20          EventManager::get_events_at_timestamp(int) const [21]
+[22]     0.0    0.00    0.00      20         void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<Event const&>(Event const&) [22]
+-----------------------------------------------
+                0.00    0.00       5/5           EventManager::read_events(std::string const&) [35]
+[23]     0.0    0.00    0.00       5         void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&>(int&, int&) [23]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [43]
+[24]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z13allocate_datav [24]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [43]
+[25]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12EventManager11read_eventsERKSs [25]
+-----------------------------------------------
+                0.00    0.00       1/1           EventManager::read_events(std::string const&) [35]
+[26]     0.0    0.00    0.00       1         void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&, int&, int&>(int&, int&, int&, int&) [26]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2016 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [24] _GLOBAL__sub_I__Z13allocate_datav (main.cpp) [9] set_bnd(int, int, int, int, float*) [clone .constprop.19] (vfinal_fluid_solver.cpp) [4] lin_solve(int, int, int, int, float*, float*, float, float) [clone .constprop.17] (vfinal_fluid_solver.cpp)
+  [25] _GLOBAL__sub_I__ZN12EventManager11read_eventsERKSs (EventManager.cpp) [8] set_bnd(int, int, int, int, float*) [clone .constprop.20] (vfinal_fluid_solver.cpp) [21] EventManager::get_events_at_timestamp(int) const
+  [10] clear_data()            [6] set_bnd(int, int, int, int, float*) [clone .constprop.21] (vfinal_fluid_solver.cpp) [23] void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&>(int&, int&)
+  [20] apply_events(std::vector<Event, std::allocator<Event> > const&) [1] simulate(EventManager&, int) [22] void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<Event const&>(Event const&)
+   [7] project(int, int, int, float*, float*, float*, float*, float*) [5] vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [26] void std::vector<Event, std::allocator<Event> >::_M_emplace_back_aux<int&, int&, int&, int&>(int&, int&, int&, int&)
+   [3] set_bnd(int, int, int, int, float*) [clone .constprop.18] (vfinal_fluid_solver.cpp) [11] dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) (2) <cycle 1>

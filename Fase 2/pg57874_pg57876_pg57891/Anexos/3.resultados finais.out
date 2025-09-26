@@ -1,0 +1,72 @@
+Running with OMP_NUM_THREADS=1
+Run 1: 0m11.727s
+Run 2: 0m11.783s
+Run 3: 0m11.612s
+Average time for OMP_NUM_THREADS=1: 11.70733333333333333333 seconds
+
+Running with OMP_NUM_THREADS=2
+Run 1: 0m6.302s
+Run 2: 0m6.073s
+Run 3: 0m6.069s
+Average time for OMP_NUM_THREADS=2: 6.14800000000000000000 seconds
+
+Running with OMP_NUM_THREADS=4
+Run 1: 0m3.327s
+Run 2: 0m3.433s
+Run 3: 0m3.376s
+Average time for OMP_NUM_THREADS=4: 3.37866666666666666666 seconds
+
+Running with OMP_NUM_THREADS=8
+Run 1: 0m2.030s
+Run 2: 0m2.088s
+Run 3: 0m2.006s
+Average time for OMP_NUM_THREADS=8: 2.04133333333333333333 seconds
+
+Running with OMP_NUM_THREADS=12
+Run 1: 0m1.627s
+Run 2: 0m1.647s
+Run 3: 0m1.436s
+Average time for OMP_NUM_THREADS=12: 1.57000000000000000000 seconds
+
+Running with OMP_NUM_THREADS=16
+Run 1: 0m1.205s
+Run 2: 0m1.453s
+Run 3: 0m1.361s
+Average time for OMP_NUM_THREADS=16: 1.33966666666666666666 seconds
+
+Running with OMP_NUM_THREADS=20
+Run 1: 0m1.533s
+Run 2: 0m1.516s
+Run 3: 0m1.644s
+Average time for OMP_NUM_THREADS=20: 1.56433333333333333333 seconds
+
+Running with OMP_NUM_THREADS=24
+Run 1: 0m1.564s
+Run 2: 0m1.797s
+Run 3: 0m1.753s
+Average time for OMP_NUM_THREADS=24: 1.70466666666666666666 seconds
+
+Running with OMP_NUM_THREADS=28
+Run 1: 0m2.215s
+Run 2: 0m2.118s
+Run 3: 0m2.177s
+Average time for OMP_NUM_THREADS=28: 2.17000000000000000000 seconds
+
+Running with OMP_NUM_THREADS=32
+Run 1: 0m2.679s
+Run 2: 0m2.561s
+Run 3: 0m2.448s
+Average time for OMP_NUM_THREADS=32: 2.56266666666666666666 seconds
+
+Running with OMP_NUM_THREADS=36
+Run 1: 0m2.982s
+Run 2: 0m3.156s
+Run 3: 0m2.790s
+Average time for OMP_NUM_THREADS=36: 2.97600000000000000000 seconds
+
+Running with OMP_NUM_THREADS=40
+Run 1: 0m2.784s
+Run 2: 0m2.707s
+Run 3: 0m2.884s
+Average time for OMP_NUM_THREADS=40: 2.79166666666666666666 seconds
+
